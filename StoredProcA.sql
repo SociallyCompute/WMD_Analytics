@@ -60,7 +60,7 @@ ELSE
    update WMD_Three set weight_in_minutes = timestampdiff(minute, p_date, `date`), row_type = 0
     where p_forum = forum and p_qid = qid and p_uniqueID = uniqueID;
 
-   update WMD_Three set row_type = 2
+   update WMD_Three set row_type = 2 -- These are connections coded to indicate they are not responses to the "top" post but another user's post .. a deeper reply structure
     where p_forum = forum 
     and p_qid = qid 
     and replyTo not like "%top";
@@ -91,7 +91,7 @@ ELSE
       content,
       forum,
       p_poster, -- basically, the creator of the "read" is the poster for the current row for everything before it ... 
-      1,
+      1, -- This makes it a "read reply"
       timestampdiff(minute, p_date, `date`)
       from
         WMD_Three
@@ -99,11 +99,16 @@ ELSE
         p_forum = forum 
         and p_qid = qid 
         and `date` > p_date
-        and row_type = 0; 
+        and row_type = 0; -- filtering on row type zero means that we are not "exploding" the deeper reply structure items here ... (code 2)
 
      SET i=i+1;
 
-    /* STILL MISSING: Direct Link subpost logic */
+    /* STILL MISSING: Direct Link subpost logic 
+        This logic will take all the rows coded as "2" for row_type and loop through them much the same way as we do the others; but ignoring 
+        everything coded as a "0" or "1"
+    */
+
+    
 
 END IF;
 
