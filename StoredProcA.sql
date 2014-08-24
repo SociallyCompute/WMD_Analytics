@@ -25,6 +25,7 @@ declare p_last_date datetime;
 declare p_first_date datetime;
 declare i int;
 
+
 -- Here is the declaration of the cursor
 DECLARE myCurse CURSOR FOR SELECT uniqueID, qid, title, poster, `date`, replyTo, content, forum, creator
 from WMD_Three order by forum, qid, `date` ASC;
@@ -57,8 +58,19 @@ IF (p_last_forum != p_forum or p_last_forum is null) and (p_last_qid != p_qid or
     where p_forum = forum and p_qid = qid;
 
 ELSE
-   update WMD_Three set weight_in_minutes = timestampdiff(minute, p_date, `date`), row_type = 0
+
+-- This version seems to get the inserts right; but its doing a time delta on itself, so all the row types of zero 
+-- have zero minutes for their time distance.
+/*   update WMD_Three set weight_in_minutes = timestampdiff(minute, p_date, `date`), row_type = 0
+    where p_forum = forum and p_qid = qid and p_uniqueID = uniqueID;*/
+
+
+
+-- updated version of query above 
+-- changed the date the weight in days is calculate from
+   update WMD_Three set weight_in_minutes = timestampdiff(minute, p_first_date, `date`), row_type = 0
     where p_forum = forum and p_qid = qid and p_uniqueID = uniqueID;
+-- end update
 
    update WMD_Three set row_type = 2 -- These are connections coded to indicate they are not responses to the "top" post but another user's post .. a deeper reply structure
     where p_forum = forum 
