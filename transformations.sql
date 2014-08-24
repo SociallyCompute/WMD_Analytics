@@ -28,4 +28,29 @@ call weightme();
 -- extraction
 Select * from WMD_Three
 order by forum, qid, localID, `date`;
+-- This got dumped to the .json file then.
 
+
+
+-- Below are mapping notes, that helped to conceptually work through how to 
+-- apply the concepts from the Group Informatics Warehouse to this corpora
+-- in a lighter weight manner (i.e., not having to break out a ton of dimension and 
+-- fact oriented tables, etc. )
+
+/*Events_Stage Field	WebMD	Notes
+		
+ID		
+context_id	concat(forum, "_",qid)	**Added Column "forum" when merging separate DBs
+Environment_code	WebMD	
+context_name	WebMD	
+context_type	Medical	
+event_ip	"na"	
+event_session	qid	
+event_action	jforum.new	
+event_object	generated	
+event_url	"na"	
+event_author_id	poster	
+event_author_name	poster	
+event_date	date	
+object_creator	phpbb_posts.user_id (explosion)	**Added Column "Creator"
+parent_id	phpbb_posts.forum_id	*/
