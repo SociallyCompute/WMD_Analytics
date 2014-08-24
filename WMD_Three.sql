@@ -1,4 +1,4 @@
-CREATE TABLE `WMD_Four` (
+CREATE TABLE `WMD_Three` (
   `uniqueID` varchar(25) NOT NULL DEFAULT '',
   `qid` varchar(45) DEFAULT NULL,
   `localID` int(11) NOT NULL DEFAULT '0',
@@ -9,9 +9,9 @@ CREATE TABLE `WMD_Four` (
   `content` text,
   `forum` varchar(45) NOT NULL DEFAULT '',
   `creator` varchar(45) DEFAULT NULL,
-  `row_type` varchar(45) DEFAULT NULL DEFAULT 0,
-  `weight_in_minutes` numeric(11,2) DEFAULT NULL DEFAULT 0,
-  PRIMARY KEY (`uniqueID`,`forum`, `row_type`),
+  `row_type` int(10) unsigned zerofill DEFAULT '0000000000',
+  `weight_in_minutes` decimal(11,2) DEFAULT '0.00',
+  PRIMARY KEY (`uniqueID`,`forum`),
   KEY `select_localID` (`localID`) USING BTREE,
   KEY `select_creator` (`creator`),
   KEY `select_poster` (`poster`),
