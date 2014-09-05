@@ -23,6 +23,7 @@ jan <- jan[jan[,"i"]!=jan[,"j"],]
 
 # Load tnet and the network as a tnet object
 library(tnet)
+jan <- na.omit(jan)
 jan <- as.tnet(jan, type="weighted one-mode tnet")
 
 jan2 <- as.tnet(jan, type="weighted one-mode tnet")
