@@ -10,6 +10,21 @@ jan[,"source"] <- factor(x=jan[,"source"], levels=jan.labels)
 jan[,"target"]   <- factor(x=jan[,"target"], levels=jan.labels)
 jan <- data.frame(i=as.integer(jan[,"source"]), j=as.integer(jan[,"target"]), w=jan[,"weight"])
 
+# Add up duplicated entries (multiple routes)
+jan <- jan[order(jan[,"i"], jan[,"j"]),]
+index <- !duplicated(jan[,c("i","j")])
+jan <- data.frame(jan[index,c("i","j")], w=tapply(jan[,"w"], cumsum(index), sum))
+
+# Take out routes with no passengers (cargo)
+jan <- jan[jan[,"w"]>0,]
+
+# Take out routes from an airport to itself
+jan <- jan[jan[,"i"]!=jan[,"j"],]
+
+# Load tnet and the network as a tnet object
+library(tnet)
+jan <- as.tnet(jan, type="weighted one-mode tnet")
+
 jan2 <- as.tnet(jan, type="weighted one-mode tnet")
 
 btTest <- betweenness_w(jan)
