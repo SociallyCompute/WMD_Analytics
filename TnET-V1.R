@@ -36,3 +36,4 @@ testc<-closeness_w(jan)
 testigraph<- tnet_igraph(jan, type="weighted one-mode tnet")
 
 degree_w(jan)
+
