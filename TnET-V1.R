@@ -6,6 +6,8 @@ summary(jan)
 
 jan.labels <- unique(c(jan[,"source"], jan[,"target"]))
 jan.labels <- jan.labels[order(jan.labels)]
+write.table(jan.labels, file="people.txt")
+write.csv(jan.labels, file="people.csv")
 jan[,"source"] <- factor(x=jan[,"source"], levels=jan.labels)
 jan[,"target"]   <- factor(x=jan[,"target"], levels=jan.labels)
 jan <- data.frame(i=as.integer(jan[,"source"]), j=as.integer(jan[,"target"]), w=jan[,"weight"])
