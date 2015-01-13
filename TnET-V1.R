@@ -2,7 +2,7 @@
 # http://toreopsahl.com/tnet/software/one-mode-data-structure/
 
 jan<-read.csv("January2010WMD-data.cdb.csv", header=TRUE, sep=",", stringsAsFactors=FALSE)
-summary(jan)
+summary(jan) 
 
 jan.labels <- unique(c(jan[,"source"], jan[,"target"]))
 jan.labels <- jan.labels[order(jan.labels)]
