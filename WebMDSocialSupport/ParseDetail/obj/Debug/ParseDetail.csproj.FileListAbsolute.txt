@@ -1,0 +1,12 @@
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\bin\Debug\ParseDetail.exe.config
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\bin\Debug\ParseDetail.exe
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\bin\Debug\ParseDetail.pdb
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\obj\Debug\ParseDetail.csprojResolveAssemblyReference.cache
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\obj\Debug\ParseDetail.exe
+C:\Users\doguan\Documents\kaggle\ForumTree\ParseDetail\obj\Debug\ParseDetail.pdb
+D:\temp\ForumTree\ParseDetail\bin\Debug\ParseDetail.exe.config
+D:\temp\ForumTree\ParseDetail\bin\Debug\ParseDetail.exe
+D:\temp\ForumTree\ParseDetail\bin\Debug\ParseDetail.pdb
+D:\temp\ForumTree\ParseDetail\obj\Debug\ParseDetail.csprojResolveAssemblyReference.cache
+D:\temp\ForumTree\ParseDetail\obj\Debug\ParseDetail.exe
+D:\temp\ForumTree\ParseDetail\obj\Debug\ParseDetail.pdb

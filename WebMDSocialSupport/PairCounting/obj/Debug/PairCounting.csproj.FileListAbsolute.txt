@@ -1,0 +1,6 @@
+D:\temp\ForumTree\PairCounting\bin\Debug\PairCounting.exe.config
+D:\temp\ForumTree\PairCounting\bin\Debug\PairCounting.exe
+D:\temp\ForumTree\PairCounting\bin\Debug\PairCounting.pdb
+D:\temp\ForumTree\PairCounting\obj\Debug\PairCounting.csprojResolveAssemblyReference.cache
+D:\temp\ForumTree\PairCounting\obj\Debug\PairCounting.exe
+D:\temp\ForumTree\PairCounting\obj\Debug\PairCounting.pdb

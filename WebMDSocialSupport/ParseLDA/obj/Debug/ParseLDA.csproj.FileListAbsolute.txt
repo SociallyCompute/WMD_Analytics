@@ -1,0 +1,6 @@
+D:\temp\ForumTree\ParseLDA\bin\Debug\ParseLDA.exe.config
+D:\temp\ForumTree\ParseLDA\obj\Debug\ParseLDA.csprojResolveAssemblyReference.cache
+D:\temp\ForumTree\ParseLDA\bin\Debug\ParseLDA.exe
+D:\temp\ForumTree\ParseLDA\bin\Debug\ParseLDA.pdb
+D:\temp\ForumTree\ParseLDA\obj\Debug\ParseLDA.exe
+D:\temp\ForumTree\ParseLDA\obj\Debug\ParseLDA.pdb

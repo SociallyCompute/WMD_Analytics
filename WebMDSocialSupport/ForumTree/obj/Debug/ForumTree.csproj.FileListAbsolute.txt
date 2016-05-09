@@ -1,0 +1,7 @@
+C:\Users\doguan\Documents\kaggle\ForumTree\ForumTree\bin\Debug\ForumTree.exe.config
+D:\temp\ForumTree\ForumTree\bin\Debug\ForumTree.exe.config
+D:\temp\ForumTree\ForumTree\bin\Debug\ForumTree.exe
+D:\temp\ForumTree\ForumTree\bin\Debug\ForumTree.pdb
+D:\temp\ForumTree\ForumTree\obj\Debug\ForumTree.csprojResolveAssemblyReference.cache
+D:\temp\ForumTree\ForumTree\obj\Debug\ForumTree.exe
+D:\temp\ForumTree\ForumTree\obj\Debug\ForumTree.pdb
